@@ -1,0 +1,22 @@
+<iframe
+	src="https://form.jotform.com/250182482860053"
+	id="jotform-iframe"
+	width="100%"
+	height="100%"></iframe>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const referralId = localStorage.getItem('referral') || 'กรุณาระบุผู้แนะนำ'
+		const currentPath = window.location.pathname
+		const insuranceProduct = currentPath.split('/').filter(Boolean).pop() || ''
+
+		const jotformUrl = `https://form.jotform.com/250182482860053?insurance_product=${encodeURIComponent(
+			insuranceProduct
+		)}&referral_id=${encodeURIComponent(referralId)}`
+
+		const jotformIframe = document.getElementById('jotform-iframe') as HTMLIFrameElement
+		if (jotformIframe) {
+			jotformIframe.src = jotformUrl
+		}
+	})
+</script>

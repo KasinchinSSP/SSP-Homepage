@@ -22,6 +22,30 @@ import Footer from '../components/Footer.astro'
 		<Navbar />
 		<slot />
 		<Footer />
+
+		<script is:inline>
+			document.addEventListener('DOMContentLoaded', () => {
+				const urlParams = new URLSearchParams(window.location.search)
+				const newReferralId = urlParams.get('ref')
+
+				const oldReferralId = localStorage.getItem('referral')
+
+				if (newReferralId) {
+					if (newReferralId !== oldReferralId) {
+						localStorage.setItem('referral', newReferralId)
+						console.log(`Referral ID updated: ${newReferralId}`)
+					} else {
+						console.log('Referral ID is the same, no update needed.')
+					}
+				} else {
+					console.log('No Referral ID provided in the URL.')
+				}
+
+				const activeReferralId = localStorage.getItem('referral') || 'No Referral ID'
+				console.log(`Active Referral ID: ${activeReferralId}`)
+			})
+		</script>
+
 		<script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"
 		></script>
 	</body>
