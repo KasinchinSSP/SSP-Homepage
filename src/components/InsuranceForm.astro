@@ -1,10 +1,21 @@
 <iframe
-	src="https://form.jotform.com/250182482860053"
-	id="jotform-iframe"
-	width="100%"
-	height="100%"></iframe>
+	id="JotFormIFrame-250182482860053"
+	title="SSP Insurance Submission"
+	onload="window.parent.scrollTo(0,0)"
+	allowtransparency="true"
+	allow="geolocation; microphone; camera; fullscreen"
+	src=""
+	style="min-width:100%;max-width:100%;height:539px;border:none;"
+	class=""></iframe>
+
+<script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
 
 <script>
+	declare global {
+		interface Window {
+			jotformEmbedHandler?: (selector: string, baseUrl: string) => void
+		}
+	}
 	document.addEventListener('DOMContentLoaded', () => {
 		const referralId = localStorage.getItem('referral') || 'กรุณาระบุผู้แนะนำ'
 		const currentPath = window.location.pathname
@@ -14,9 +25,18 @@
 			insuranceProduct
 		)}&referral_id=${encodeURIComponent(referralId)}`
 
-		const jotformIframe = document.getElementById('jotform-iframe') as HTMLIFrameElement
+		const jotformIframe = document.getElementById(
+			'JotFormIFrame-250182482860053'
+		) as HTMLIFrameElement
 		if (jotformIframe) {
 			jotformIframe.src = jotformUrl
+		}
+
+		if (typeof window.jotformEmbedHandler === 'function') {
+			window.jotformEmbedHandler(
+				"iframe[id='JotFormIFrame-250182482860053']",
+				'https://form.jotform.com/'
+			)
 		}
 	})
 </script>
