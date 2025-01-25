@@ -1,4 +1,4 @@
-<footer class="bg-white">
+<footer class="bg-white" id="footer">
 	<div class="mx-auto w-full max-w-screen-xl p-4 md:py-8">
 		<div class="invisible sm:flex sm:items-center sm:justify-between">
 			<ul class="mb-6 flex flex-wrap items-center text-sm font-medium text-gray-500 sm:mb-0">
@@ -22,3 +22,19 @@
 		>
 	</div>
 </footer>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const currentPath = window.location.pathname
+
+		const hideFooter = currentPath.startsWith('/insurance') || currentPath.startsWith('/submit')
+
+		if (hideFooter) {
+			const footer = document.getElementById('footer')
+
+			if (footer) {
+				footer.classList.add('hidden')
+			}
+		}
+	})
+</script>

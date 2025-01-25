@@ -1,0 +1,426 @@
+/* Hide Auto Next */
+#id_24 /* Company */ {
+	position: fixed;
+	z-index: -1;
+	visibility: hidden;
+}
+
+@media screen and (max-width: 480px),
+	screen and (max-device-width: 767px) and (orientation: portrait),
+	screen and (max-device-width: 415px) {
+	/* ------ All Form Start ------ */
+
+	.supernova body {
+		height: 100dvh;
+		margin: 0 !important;
+	}
+
+	.supernova h2 {
+		font-size: 5.5dvw !important;
+	}
+
+	.form-all {
+		box-shadow: none;
+		border-radius: 0;
+		margin: 0;
+		max-width: 100%;
+		background-color: transparent !important;
+	}
+
+	.form-section.page-section {
+		padding: 0;
+		height: 94dvh;
+		overflow: auto;
+	}
+
+	.form-header-group {
+		margin: 0;
+		padding: 15px;
+	}
+
+	.header-default .form-header {
+		margin: 0;
+	}
+
+	.jf-form-buttons {
+		margin: 0 !important;
+		padding: 0 !important;
+		border-radius: 0;
+	}
+
+	.form-button-error,
+	.form-error-message,
+	.error-navigation-inner {
+		display: none !important;
+	}
+
+	.page-section li[data-type='control_head'] {
+		height: fit-content;
+		overflow: auto;
+	}
+
+	.page-section li[data-type='control_pagebreak'] {
+		position: fixed;
+		bottom: 0;
+		display: flex;
+		justify-content: space-around;
+		align-items: end;
+		width: 100%;
+		height: 6dvh;
+		overflow: hidden;
+		background-color: white;
+	}
+
+	.page-section li[data-type='control_button'] {
+		position: fixed;
+		bottom: 0;
+		display: flex;
+		justify-content: space-around;
+		align-items: end;
+		width: 100%;
+		height: 6dvh;
+		overflow: hidden;
+		background-color: white;
+	}
+
+	.page-section li[data-type='control_button'] > div:first-child {
+		height: inherit;
+	}
+
+	.form-pagebreak {
+		padding: 0;
+		margin: 0;
+		width: 100dvw;
+		height: inherit;
+		border: none;
+	}
+
+	.form-pagebreak-back-container {
+		width: 50%;
+		order: 1;
+	}
+
+	.form-pagebreak-back.jf-form-buttons {
+		width: 100%;
+		height: inherit;
+	}
+
+	.form-pagebreak-next-container {
+		width: 50%;
+		order: 2;
+	}
+
+	.form-pagebreak-next.jf-form-buttons {
+		width: 100%;
+		height: inherit;
+	}
+
+	.form-line-active,
+	.form-line-error {
+		background-color: transparent;
+	}
+
+	.submit-button {
+		width: 50%;
+		height: inherit;
+		order: 3;
+	}
+
+	#form-pagebreak-next_142 {
+		width: 100%;
+	}
+
+	#cid_142 .form-pagebreak-back-container {
+		display: none;
+	}
+
+	#cid_142 .form-pagebreak-next-container {
+		width: 100%;
+	}
+
+	/* ------ All Form End ------ */
+
+	/* ------ Insurance Products Start ------ */
+
+	#section_40, /* PA480 */
+    #id_143,  /* PA480 IMG */
+    #section_93, /* PA1680 */
+    #id_144 /* PA1680 IMG */ {
+		margin: 0px;
+		padding: 0px;
+	}
+
+	/* ------ Insurance Products End ------ */
+
+	/* ------ Actual Line End Here ------ */
+
+	/* ------ Section Group Start ------ */
+
+	#section_55, /* Assured Info */
+      #section_56, /* Thai ID */
+      #section_70, /* Beneficiary Info */
+      #section_81, /* Terms */
+      #section_85,
+      #section_121, /* Receipt */
+      #id_94 /* Micro 200 */ {
+		flex-flow: column;
+		margin: 15px;
+		padding: 0;
+		height: 82dvh;
+		overflow: auto;
+		background: rgba(255, 255, 255, 0.8);
+		border-radius: 16px;
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(5px);
+		-webkit-backdrop-filter: blur(5px);
+		border: 1px solid rgba(255, 255, 255, 0.3);
+	}
+
+	/*Section Hide*/
+	.form-section li[data-type='control_collapse'] {
+		display: none;
+	}
+
+	/* ------ Section Group End ------ */
+
+	/* ------ Welcome Page Start ------*/
+	#id_23,
+	#id_125,
+	#id_126,
+	#id_128 {
+		margin: auto 15px;
+		padding: 25dvh 0;
+		background: rgba(255, 255, 255, 0.8);
+		border-radius: 16px;
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(5px);
+		-webkit-backdrop-filter: blur(5px);
+		border: 1px solid rgba(255, 255, 255, 0.3);
+	}
+
+	/* ------ Welcome Page End ------*/
+
+	/* ------ Terms Start ------ */
+
+	/* Terms Paragraph */
+	#id_19 {
+		margin: 0 15px;
+		padding: 0;
+		width: auto;
+	}
+
+	#section_81 {
+		height: 76dvh !important;
+		margin: 15px 15px 0 15px !important;
+	}
+
+	#section_84 {
+		margin: 0;
+		padding: 0;
+	}
+
+	/* Terms Checkbox */
+	#id_18 {
+		margin: auto 15px;
+		padding: 0 15px;
+		height: fit-content;
+		overflow: hidden;
+	}
+
+	/* ------ Terms End ------ */
+
+	/* ------ Payment ------ */
+
+	#section_112 {
+		background: white;
+		height: 94dvh;
+	}
+
+	#section_112,
+	#id_20,
+	#id_113,
+	#id_114,
+	#id_115 {
+		margin: 0 auto;
+		padding: 0;
+	}
+
+	#cid_20 .form-image {
+		background-color: #1a3761;
+		width: 100dvw;
+		padding: 2dvh 30dvw;
+	}
+
+	#cid_113 .form-image {
+		padding: 0 20dvw;
+	}
+
+	#cid_114 .form-image {
+		padding: 0 16dvw;
+	}
+
+	#text_115 {
+		text-align: center;
+	}
+
+	#text_115 p:nth-of-type(1) {
+		font-size: 3.5dvw;
+		margin: 0;
+	}
+
+	#text_115 p:nth-of-type(2) {
+		font-size: 4dvw;
+		margin: 20px 0 0 0;
+	}
+
+	#text_115 p:nth-of-type(3) {
+		font-size: 5dvw;
+		font-weight: bold;
+		margin: 0;
+	}
+
+	/* ------ Receipt ------ */
+
+	#text_123 {
+		font-weight: bold;
+		font-size: 5dvw;
+		text-align: center;
+	}
+
+	#id_123,
+	#id_122,
+	#id_119 {
+		width: auto;
+		margin: 0;
+	}
+
+	#id_123 {
+		padding: 0;
+	}
+
+	/* ------ Micro 200 Start ------ */
+
+	#section_85 {
+		height: 90dvh !important;
+	}
+
+	#id_86,
+	#id_90,
+	#id_91,
+	#id_94 {
+		margin: 0 15px;
+		padding: 0;
+		width: auto;
+	}
+
+	#id_91 td {
+		border-bottom: 4px solid transparent;
+	}
+
+	/* ------ Micro 200 End ------ */
+
+	#section_55 .form-line, /* Assured Info */
+      #section_70 .form-line /* Beneficiary Info */ {
+		margin: 0 15px 15px;
+		padding: 0;
+		width: auto !important;
+	}
+
+	#section_55 .form-label-top,
+	#section_70 .form-label-top {
+		margin: 0 0 4px 4px;
+		padding: 0;
+	}
+
+	/* ------ First Line ------ */
+	#id_71,
+	#id_48 {
+		margin-top: 15px !important;
+	}
+
+	#form-pagebreak-next_3 {
+		width: 100%;
+	}
+
+	#cid_3 .form-pagebreak-back-container {
+		display: none;
+	}
+
+	#cid_3 .form-pagebreak-next-container {
+		width: 100%;
+	}
+
+	/*Company*/
+	#id_17 {
+		height: 82dvh;
+		margin: auto;
+		padding: 0;
+		overflow: scroll;
+		scroll-behavior: smooth;
+	}
+
+	/* --- Section TID --- */
+
+	#id_42,
+	#id_61,
+	#id_62,
+	#id_63,
+	#id_66 {
+		padding: 0;
+		margin: 0 auto 15px auto;
+		width: auto;
+	}
+
+	#id_61 {
+		margin-top: 15px;
+	}
+
+	/* ------ Summary ------ */
+
+	#id_94 {
+		width: 100% !important;
+	}
+
+	#id_94 .form-line-active {
+		background-color: rgba(255, 255, 255, 0.8);
+	}
+
+	#cid_94 {
+		margin: 0 15px;
+		padding: 0;
+		width: auto;
+	}
+
+	/*Label TID Upload*/
+	#label_21,
+	#label_66 {
+		display: none;
+	}
+
+	/* ------ Thank You Page ------ */
+	body.thankyou {
+		margin: 15px !important;
+		width: calc(100dvw - 30px);
+		height: 80dvh;
+	}
+
+	#stage .form-all {
+		flex-flow: column;
+		margin: auto !important;
+		padding: 0 !important;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		background: rgba(255, 255, 255, 0.8) !important;
+		border-radius: 16px;
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(5px);
+		border: 1px solid rgba(255, 255, 255, 0.3);
+	}
+
+	.tyBgImage {
+		margin: 0;
+		width: 50dvw !important;
+		max-width: none !important;
+	}
+}

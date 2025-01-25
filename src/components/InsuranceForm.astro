@@ -5,7 +5,7 @@
 	allowtransparency="true"
 	allow="geolocation; microphone; camera; fullscreen"
 	src=""
-	style="min-width:100%;max-width:100%;height:539px;border:none;"
+	style="min-width:100%;max-width:100%;height:100%;border:none;position:fixed;top:0;left:0;"
 	class=""></iframe>
 
 <script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
@@ -16,6 +16,20 @@
 			jotformEmbedHandler?: (selector: string, baseUrl: string) => void
 		}
 	}
+
+	function adjustIframe() {
+		const navbar = document.querySelector('nav')
+		const iframe = document.getElementById('JotFormIFrame-250182482860053') as HTMLIFrameElement
+
+		if (navbar && iframe) {
+			const navbarHeight = navbar.offsetHeight
+			const viewportHeight = window.innerHeight
+			const iframeHeight = viewportHeight - navbarHeight
+			iframe.style.top = `${navbarHeight}px`
+			iframe.style.height = `${iframeHeight}px`
+		}
+	}
+
 	document.addEventListener('DOMContentLoaded', () => {
 		const referralId = localStorage.getItem('referral') || 'กรุณาระบุผู้แนะนำ'
 		const currentPath = window.location.pathname
@@ -25,11 +39,10 @@
 			insuranceProduct
 		)}&referral_id=${encodeURIComponent(referralId)}`
 
-		const jotformIframe = document.getElementById(
-			'JotFormIFrame-250182482860053'
-		) as HTMLIFrameElement
-		if (jotformIframe) {
-			jotformIframe.src = jotformUrl
+		const iframe = document.getElementById('JotFormIFrame-250182482860053') as HTMLIFrameElement
+
+		if (iframe) {
+			iframe.src = jotformUrl
 		}
 
 		if (typeof window.jotformEmbedHandler === 'function') {
@@ -38,5 +51,11 @@
 				'https://form.jotform.com/'
 			)
 		}
+
+		adjustIframe()
+
+		window.addEventListener('resize', adjustIframe)
+
+		document.body.style.overflow = 'hidden'
 	})
 </script>

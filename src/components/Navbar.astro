@@ -1,22 +1,21 @@
 <nav class="fixed start-0 top-0 z-20 w-full border-b border-gray-200 bg-white">
-	<div class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
-		<a class="flex items-center space-x-3 rtl:space-x-reverse" href="/">
-			<img src="/logo/SSP_Logo_Pic.svg" class="h-10 md:h-12" alt="SSP Logo" />
-			<img src="/logo/SSP_Logo_Text.svg" class="h-8" alt="SSP Logo Text" />
+	<div
+		id="navbar-container"
+		class="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between px-4 py-2"
+	>
+		<a class="flex items-center space-x-3 rtl:space-x-reverse">
+			<img src="/logo/SSP_Logo_Pic.svg" class="h-8 md:h-12" alt="SSP Logo" />
+			<img src="/logo/SSP_Logo_Text.svg" class="h-6" alt="SSP Logo Text" />
 		</a>
 		<div class="flex space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse">
 			<button
-				type="button"
-				class="rounded-2xl bg-gradient-to-r from-sky-500 via-sky-700 to-primary px-4 py-2 text-center text-sm font-medium text-white focus:ring-2 focus:ring-blue-300"
-				>เข้าสู่ระบบ</button
-			>
-			<button
 				data-collapse-toggle="navbar-sticky"
 				type="button"
-				class="hidden h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden"
+				id="open-menu"
+				class="inline-flex h-8 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden"
 				aria-controls="navbar-sticky"
 				aria-expanded="false"
-				><!-- inline-flex -->
+			>
 				<span class="sr-only">Open main menu</span>
 				<svg
 					class="h-5 w-5"
@@ -34,10 +33,13 @@
 				</svg>
 			</button>
 		</div>
-		<div class="hidden w-full items-center justify-between md:order-1 md:w-auto" id="navbar-sticky">
-			<!-- md:flex  -->
+		<div
+			class="w-full items-center justify-between md:order-1 md:flex md:w-auto"
+			id="navbar-sticky"
+		>
 			<ul
 				class="mt-4 flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-white md:p-0 rtl:space-x-reverse"
+				id="menu-items"
 			>
 				<li>
 					<a
@@ -57,7 +59,7 @@
 					<a
 						href="#"
 						class="block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700"
-						>บริการ</a
+						>ผลิตภัณฑ์ประกันภัย</a
 					>
 				</li>
 				<li>
@@ -71,3 +73,30 @@
 		</div>
 	</div>
 </nav>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const currentPath = window.location.pathname
+
+		const shouldHideMenu = currentPath.startsWith('/insurance') || currentPath.startsWith('/submit')
+
+		if (shouldHideMenu) {
+			const menuItems = document.getElementById('menu-items')
+			const openMenuButton = document.getElementById('open-menu')
+			const navbarContainer = document.getElementById('navbar-container')
+
+			if (menuItems) {
+				menuItems.classList.add('hidden')
+			}
+
+			if (openMenuButton) {
+				openMenuButton.classList.add('hidden')
+			}
+
+			if (navbarContainer) {
+				navbarContainer.classList.remove('justify-between')
+				navbarContainer.classList.add('justify-center')
+			}
+		}
+	})
+</script>
