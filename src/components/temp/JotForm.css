@@ -29,7 +29,7 @@
 
 	.form-section.page-section {
 		padding: 0;
-		height: 94dvh;
+		height: 93.5dvh;
 		overflow: auto;
 	}
 
@@ -66,7 +66,7 @@
 		justify-content: space-around;
 		align-items: end;
 		width: 100%;
-		height: 6dvh;
+		height: 6.5dvh;
 		overflow: hidden;
 		background-color: white;
 	}
@@ -78,7 +78,7 @@
 		justify-content: space-around;
 		align-items: end;
 		width: 100%;
-		height: 6dvh;
+		height: 6.5dvh;
 		overflow: hidden;
 		background-color: white;
 	}
@@ -96,7 +96,7 @@
 	}
 
 	.form-pagebreak-back-container {
-		width: 50%;
+		width: 50% !important;
 		order: 1;
 	}
 
@@ -118,6 +118,12 @@
 	.form-line-active,
 	.form-line-error {
 		background-color: transparent;
+	}
+
+	.form-required {
+		display: none;
+		position: absolute;
+		font-size: 0px;
 	}
 
 	.submit-button {
@@ -152,6 +158,194 @@
 
 	/* ------ Insurance Products End ------ */
 
+	/* ------ Section Group Start ------ */
+	#section_33 {
+		flex-flow: column;
+		margin: 15px;
+		padding: 0;
+		height: 82dvh;
+		overflow: auto;
+		background: rgba(255, 255, 255, 0.8);
+		border-radius: 16px;
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(5px);
+		-webkit-backdrop-filter: blur(5px);
+		border: 1px solid rgba(255, 255, 255, 0.3);
+	}
+
+	/* ------ Section Group End ------ */
+
+	/* ------ Terms Start ------ */
+
+	/* Terms Paragraph */
+	#id_35 {
+		margin: 0 15px;
+		padding: 0;
+		width: auto;
+	}
+
+	#section_33 {
+		height: 76dvh !important;
+		margin: 15px 15px 0 15px !important;
+	}
+
+	#section_36 {
+		margin: 0;
+		padding: 0;
+	}
+
+	/* Terms Checkbox */
+	#id_37 {
+		margin: auto 15px;
+		padding: 0 15px;
+		height: fit-content;
+		overflow: hidden;
+	}
+
+	/* ------ Terms End ------ */
+
+	/* ------ Critical Question Start ------ */
+	#id_124, /* PA Q1 */
+	#id_126, /* PA Q2 */
+	#id_130, /* PA A1 */
+	#id_132, /* PA A2 */
+	#id_133 /* Mark */ {
+		margin: 0;
+		padding: 0 12px;
+		width: auto;
+	}
+	/* ------ Critical Question End ------ */
+
+	/* ------ Payment Start ------ */
+
+	#section_51,
+	#id_152 /* Thai QR Payment */ {
+		margin: 0;
+		padding: 0;
+	}
+
+	#cid_152 .form-image {
+		background-color: #1a3761;
+		width: 100dvw;
+		padding: 2dvh 30dvw;
+	}
+
+	#id_153, /* PromptPay */
+	#id_158 /* QR Sample */ {
+		margin: 0;
+		padding: 12px;
+	}
+
+	#id_134,
+	#id_135 {
+		margin: 0 auto;
+		padding: 0;
+	}
+
+	#text_134,
+	#text_135 {
+		text-align: center;
+	}
+
+	#text_134 p:nth-of-type(1),
+	#text_135 p:nth-of-type(1) {
+		font-size: 4dvw;
+		font-weight: bold;
+		margin: 0;
+	}
+
+	#text_134 p:nth-of-type(2),
+	#text_135 p:nth-of-type(2) {
+		font-size: 4dvw;
+		margin: 0 12px 12px 12px;
+		padding: 0 12px;
+	}
+
+	#text_134 p:nth-of-type(3),
+	#text_135 p:nth-of-type(3) {
+		font-size: 5dvw;
+		font-weight: bold;
+		margin: 0;
+	}
+
+	/* ------ Payment End ------ */
+
+	/* ------ Upload Slip Start ------ */
+
+	#id_154 {
+		width: auto;
+		margin: 0;
+	}
+
+	/* ------ Upload Slip End ------ */
+
+	/* ------ Assured Verify Start ------ */
+
+	#section_60 {
+		margin: 0;
+		padding: 0 12px;
+	}
+
+	#id_155, /* TID Sample */
+	#id_156 /* TID First Paragraph */ {
+		margin: 0;
+		padding: 0;
+		text-align: center;
+	}
+
+	#id_61 /* TID Second Paragraph */ {
+		margin: 0;
+		padding: 0 12px;
+	}
+
+	/* ------ Assured Verify End ------ */
+
+	/* ------ Assured Info Start ------ */
+
+	#section_67 .form-line, /* Assured Profile */
+	#section_97 .form-line, /* Assured Job */
+	#section_118 .form-line /* Benefic 1 */ {
+		margin: 0;
+	}
+
+	#section_118 {
+		height: 85dvh;
+		overflow: hidden;
+	}
+
+	#id_123 {
+		margin-bottom: 100% !important;
+	}
+
+	/* ------ Assured Info End ------ */
+
+	/* ------ Thank You Page ------ */
+	body.thankyou {
+		margin: 15px !important;
+		width: calc(100dvw - 30px);
+		height: 80dvh;
+	}
+
+	#stage .form-all {
+		flex-flow: column;
+		margin: auto !important;
+		padding: 0 !important;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		background: rgba(255, 255, 255, 0.8) !important;
+		border-radius: 16px;
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(5px);
+		border: 1px solid rgba(255, 255, 255, 0.3);
+	}
+
+	.tyBgImage {
+		margin: 0;
+		width: 50dvw !important;
+		max-width: none !important;
+	}
+
 	/* ------ Actual Line End Here ------ */
 
 	/* ------ Section Group Start ------ */
@@ -159,7 +353,7 @@
 	#section_55, /* Assured Info */
       #section_56, /* Thai ID */
       #section_70, /* Beneficiary Info */
-      #section_81, /* Terms */
+	  #section_81, /* Terms */
       #section_85,
       #section_121, /* Receipt */
       #id_94 /* Micro 200 */ {
@@ -200,40 +394,11 @@
 
 	/* ------ Welcome Page End ------*/
 
-	/* ------ Terms Start ------ */
-
-	/* Terms Paragraph */
-	#id_19 {
-		margin: 0 15px;
-		padding: 0;
-		width: auto;
-	}
-
-	#section_81 {
-		height: 76dvh !important;
-		margin: 15px 15px 0 15px !important;
-	}
-
-	#section_84 {
-		margin: 0;
-		padding: 0;
-	}
-
-	/* Terms Checkbox */
-	#id_18 {
-		margin: auto 15px;
-		padding: 0 15px;
-		height: fit-content;
-		overflow: hidden;
-	}
-
-	/* ------ Terms End ------ */
-
 	/* ------ Payment ------ */
 
 	#section_112 {
 		background: white;
-		height: 94dvh;
+		height: 93.5dvh;
 	}
 
 	#section_112,
@@ -241,6 +406,11 @@
 	#id_113,
 	#id_114,
 	#id_115 {
+		margin: 0 auto;
+		padding: 0;
+	}
+
+	#id_20 {
 		margin: 0 auto;
 		padding: 0;
 	}
